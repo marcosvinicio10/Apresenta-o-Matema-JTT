@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sistema Numérico Maia</title>
+  <style>
+    :root {
+      --verde-escuro: #004d40;
+      --verde-medio: #00796b;
+      --verde-claro: #e0f2f1;
+      --branco: #ffffff;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(90deg, var(--verde-escuro), var(--verde-medio));
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      margin-bottom: 0.5rem;
+      font-size: 2.5rem;
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    section {
+      background: var(--branco);
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+      animation: fadeInUp 1s ease;
+      transition: transform 0.3s ease;
+    }
+
+    section:hover {
+      transform: translateY(-5px);
+    }
+
+    h2 {
+      color: var(--verde-escuro);
+      margin-top: 0;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    .placeholder-box {
+      background: var(--verde-claro);
+      border-left: 6px solid var(--verde-medio);
+      padding: 1rem;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+
+    .simbolos {
+      display: flex;
+      gap: 2rem;
+      margin-top: 1rem;
+      justify-content: space-around;
+    }
+
+    .simbolo {
+      text-align: center;
+    }
+
+    .simbolo div {
+      font-size: 2rem;
+    }
+
+    .simbolo span {
+      display: block;
+      margin-top: 0.5rem;
+      color: var(--verde-escuro);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: var(--verde-escuro);
+      color: white;
+      border-top: 5px solid var(--verde-medio);
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .simbolos {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Sistema Numérico Maia</h1>
+  <p>Descubra a genialidade matemática dos antigos maias</p>
+</header>
+
+<main>
+  <section>
+    <h2>Onde foi adotado?</h2>
+    <p>O sistema numérico maia foi utilizado na região da <strong>Mesoamérica</strong>, englobando o sul do México, Guatemala, Belize, Honduras e El Salvador.</p>
+  </section>
+
+  <section>
+    <h2>Quando foi usado?</h2>
+    <p>Esse sistema surgiu por volta do <strong>séc. IV a.C.</strong> e foi usado até o <strong>séc. XVI</strong>, com a chegada dos colonizadores europeus.</p>
+  </section>
+
+  <section>
+    <h2>Como funcionava?</h2>
+    <p>O sistema maia era de base 20 (vigesimal) e usava apenas três símbolos:</p>
+    
+    <div class="simbolos">
+      <div class="simbolo">
+        <div>·</div>
+        <span>Ponto = 1</span>
+      </div>
+      <div class="simbolo">
+        <div>—</div>
+        <span>Barra = 5</span>
+      </div>
+      <div class="simbolo">
+        <div>&#x1F41A;</div> <!-- Representa uma concha -->
+        <span>Concha = 0</span>
+      </div>
+    </div>
+
+    <p>Os números eram organizados verticalmente, com os valores aumentando de baixo para cima, usando potências de 20.</p>
+  </section>
+
+  <section>
+    <h2>Inspiração</h2>
+    <p>Os maias contavam com os <strong>dedos das mãos e dos pés</strong>, o que pode ter inspirado o uso da base 20. Eles também tinham um grande interesse por astronomia e calendário, o que influenciou sua matemática.</p>
+  </section>
+
+  <section>
+    <h2>Vantagens</h2>
+    <ul>
+      <li><strong>Uso do zero:</strong> um dos primeiros povos a usarem o zero, inclusive como <em>placeholder</em>.</li>
+      <li><strong>Simplicidade:</strong> sistema visual fácil de entender.</li>
+      <li><strong>Precisão astronômica:</strong> permitiu calendários mais avançados que os europeus da época.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>O que é Placeholder?</h2>
+    <div class="placeholder-box">
+      <p><strong>Placeholder</strong> é um "espaço reservado" em um número. Por exemplo, no número <code>204</code>, o <strong>0</strong> indica que não há dezenas, mas ele é importante para mostrar que o 2 está nas centenas e o 4 nas unidades. Sem o zero, o valor mudaria completamente!</p>
+      <p>Os maias já usavam esse conceito com a concha, o que foi revolucionário na história da matemática.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>Feito com carinho para quem ama matemática e programação.</p>
+</footer>
+
+</body>
+</html>
